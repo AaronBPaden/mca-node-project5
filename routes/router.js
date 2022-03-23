@@ -4,6 +4,7 @@ const router = express.Router();
 
 router.use(express.static('public'));
 router.use('/characters', require('./api/characterRoutes'));
+router.use('/products', require('./api/productsRoutes'));
 
 router.get('/', (req, res) => {
     res.render('pages/home', {
