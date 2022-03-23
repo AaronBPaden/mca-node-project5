@@ -1,0 +1,10 @@
+<%- include('../partials/header'); %>
+<main class="main container-fluid">
+	<h2>A list of your favorite characters!</h2>
+	<ul>
+		<% data.forEach(el => { %>
+			<li><%= el.name %></li>
+		<% }); %>
+	</ul>
+</main>
+<%- include('../partials/footer'); %>

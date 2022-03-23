@@ -3,6 +3,7 @@ const express = require('express');
 const router = express.Router();
 
 router.use(express.static('public'));
+router.use('/characters', require('./api/characterRoutes'));
 
 router.get('/', (req, res) => {
     res.render('pages/home', {
