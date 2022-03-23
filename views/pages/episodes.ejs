@@ -1,0 +1,12 @@
+<%- include('../partials/header'); %>
+<main class="main container-fluid episodes-container">
+	<% data.forEach(el => { %>
+		<a href="/episodes/<%= el.id %>">
+			<div className="episodes-box">
+				<img src="<%= el.thumbnailUrl %>" alt="<%= el.name %>" />
+				<h3><%= el.name %></h3>
+			</div>
+		</a>
+	<% }); %>
+</main>
+<%- include('../partials/footer'); %>
